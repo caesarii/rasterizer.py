@@ -8,6 +8,8 @@ Software 3D Renderer in Python
 - Python 2 or Python 3
 - PyOpenGL
 - NumPy
+- watchdog
+- nose
 
 ## Licence
 Apache 2.0
