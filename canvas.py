@@ -44,15 +44,15 @@ class Canvas(object):
 
         if abs(dx) > abs(dy):
             xmin, xmax = sorted([x1, x2])
-            ratio = 0 if dx == 0 else dy / dx
+            ratio = dy / dx
             for x in range(xmin, xmax):
-                y = y1 + (x - x1) * ratio
+                y = y1 + (x - xmin) * ratio
                 self.draw_point(Vector(x, y))
         else:
             ymin, ymax = sorted([y1, y2])
-            ratio = 0 if dy == 0 else dx / dy
+            ratio = dx / dy
             for y in range(ymin, ymax):
-                x = x1 + (y - y1) * ratio
+                x = x1 + (y - ymin) * ratio
                 self.draw_point(Vector(x, y))
 
     def draw_scanline(self, va, vb, y):
